@@ -1,0 +1,63 @@
+@import "tailwindcss";
+@import "./catan.css";
+
+@theme {
+  --font-sans: "Noto Sans TC", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang TC", "Microsoft JhengHei", sans-serif;
+  --font-serif: "Noto Serif TC", "Songti TC", "PMingLiU", "Baskerville", Georgia, serif;
+  --font-mono: "JetBrains Mono", "SF Mono", "Fira Code", "Courier New", Courier, monospace;
+}
+
+body {
+  margin: 0;
+  background-color: #f5f0e8;
+  color: #1b1517;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 內文至少 16px；小字保留層級，但不再用 10–12px 排中文。預留底部空間避免浮動捲動鈕遮擋。 */
+.product-root { font-size: 17px; line-height: 1.7; padding-bottom: 128px; }
+.product-root .text-xs { font-size: 14px; line-height: 1.65; }
+.product-root .text-sm { font-size: 16px; line-height: 1.7; }
+.product-root :is(div, span, p)[class*="text-[10px]"], .product-root :is(div, span, p)[class*="text-[11px]"], .product-root :is(div, span, p)[class*="text-[13px]"] { font-size: 14px; line-height: 1.65; }
+.product-root .font-mono { font-family: var(--font-sans); }
+.product-root p { overflow-wrap: anywhere; }
+.product-root button { min-height: 44px; }
+.product-root input { font-size: 16px; min-height: 40px; }
+.product-root :focus-visible { outline: 3px solid #147496; outline-offset: 3px; }
+.reading-navigation { display: inline-flex; gap: 4px; padding: 2px; border: 1px solid #52525b; border-radius: 6px; background: rgba(24, 24, 27, 0.95); backdrop-filter: blur(8px); color: #fef3c7; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25); }
+.reading-navigation button { display: inline-flex; align-items: center; gap: 3px; padding: 4px 8px; font-size: 12px; font-weight: 800; color: #fef3c7; cursor: pointer; border-radius: 4px; min-height: 28px; white-space: nowrap; }
+.reading-navigation button:hover:not(:disabled) { background: #3f3f46; }
+.reading-navigation button:disabled { opacity: .45; cursor: default; }
+.help-trigger { position: fixed; top: 72px; left: 20px; z-index: 45; display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border: 1.5px solid #b8aa95; border-radius: 999px; background: rgba(252, 248, 227, 0.96); backdrop-filter: blur(10px); color: #1e1916; font-size: 14px; font-weight: 800; box-shadow: 0 6px 18px rgba(30, 25, 22, 0.16); cursor: pointer; }
+.how-to-dialog { width: min(720px, calc(100% - 32px)); max-height: 85dvh; margin: auto; padding: 24px; border: 2px solid #8c734b; border-radius: 12px; background: #fcf8e3; color: #27272a; overflow-y: auto; }
+.how-to-dialog::backdrop { background: #09090bbd; }
+.help-steps { display: grid; gap: 16px; margin-top: 24px; }
+.help-steps li { display: flex; align-items: flex-start; gap: 12px; }
+.help-step-number { width: 32px; height: 32px; display: grid; place-items: center; flex-shrink: 0; border-radius: 50%; background: #147496; color: white; }
+.prediction-example { display: flex; flex-direction: column; width: 100%; padding: 0; border: 1px solid #c5b596; border-radius: 6px; background: white; margin-top: 12px; overflow: hidden; cursor: pointer; text-align: center; }
+.prediction-example-chart { position: relative; display: block; width: 100%; height: 116px; }
+.example-grid { position: absolute; inset: 10px 10px 0 10px; background: repeating-linear-gradient(to top, transparent 0 29px, #ddd 30px 31px); }
+.example-caption { display: block; width: 100%; padding: 8px 10px; border-top: 1px solid #e5dccb; background: #faf6eb; font-size: 13.5px; line-height: 1.45; color: #52525b; font-weight: 700; }
+@media (max-width: 640px) { .reading-navigation { bottom: 8px; } .how-to-dialog { padding: 16px; } }
+@media (prefers-reduced-motion: reduce) { .product-root *, .product-root *::before, .product-root *::after { animation: none !important; transition: none !important; } }
+
+/* Custom styled retro scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.12);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8c734b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a88d5e;
+}

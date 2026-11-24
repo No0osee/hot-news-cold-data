@@ -1,0 +1,746 @@
+[
+  {
+    "number": "01",
+    "file": "01_台灣空氣越來越糟.xlsx",
+    "sha256": "606e856fd383fe1252483b160b1b0f78a96858978081ebdd6f7fa2324bd77344",
+    "workbookUrl": "/sources/topic-01.xlsx",
+    "meta": {
+      "案例": "台灣空氣越來越糟？",
+      "偏誤類型": "負面型直覺",
+      "適用性判定": "可用於PM2.5濃度趨勢；題目「空氣」應在圖中明確限縮為PM2.5",
+      "圖表建議": "折線圖",
+      "資料期間": "2021–2025年",
+      "數值單位": "µg/m³",
+      "統計口徑與注意事項": "全國PM2.5年平均值。2023年曾反彈，不宜寫成「逐年下降」；此指標不能代表全部空氣污染物或每個地點的暴露。",
+      "資料查核日": "2026-10-03",
+      "資料來源1": "環境部，歷年全國PM2.5年均濃度",
+      "網址或路徑1": "https://enews.moenv.gov.tw/moenv-news/zh-tw/News/1844"
+    },
+    "sources": [
+      {
+        "title": "環境部，歷年全國PM2.5年均濃度",
+        "url": "https://enews.moenv.gov.tw/moenv-news/zh-tw/News/1844"
+      }
+    ],
+    "series": [
+      {
+        "sheet": "製圖數據",
+        "unit": "µg/m³",
+        "points": [
+          {
+            "label": "2021",
+            "value": 14.4
+          },
+          {
+            "label": "2022",
+            "value": 12.4
+          },
+          {
+            "label": "2023",
+            "value": 13.7
+          },
+          {
+            "label": "2024",
+            "value": 12.8
+          },
+          {
+            "label": "2025",
+            "value": 12.8
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "number": "02",
+    "file": "02_國旅已經沒人去了.xlsx",
+    "sha256": "cbc3d5712143c5d374d91135c56d138bab8ff26bf5faa704de5693c65e8ad254",
+    "workbookUrl": "/sources/topic-02.xlsx",
+    "meta": {
+      "案例": "國旅已經沒人去了？",
+      "偏誤類型": "負面型直覺",
+      "適用性判定": "可用；須明示旅次、調查對象及疫情基期",
+      "圖表建議": "折線圖",
+      "資料期間": "2019–2025年",
+      "數值單位": "萬旅次",
+      "統計口徑與注意事項": "調查對象為12歲以上國人。旅次不等於旅客人數；同一人可多次旅遊。加入疫情前2019年和2020年，避免只從疫情谷底2021年起算。",
+      "資料查核日": "2026-10-03",
+      "資料來源1": "交通部觀光署，2021年臺灣旅遊狀況調查（含2019至2021）",
+      "網址或路徑1": "https://admin.taiwan.net.tw/fapi/AttFile?id=27974&type=AttFile",
+      "資料來源2": "交通部觀光署，歷年臺灣旅遊狀況調查",
+      "網址或路徑2": "https://admin.taiwan.net.tw/fapi/AttFile?id=38640&type=AttFile",
+      "資料來源3": "交通部，114年國旅調查新聞稿",
+      "網址或路徑3": "https://www.motc.gov.tw/ch/app/data/view?id=14&module=news&serno=96139457-a19b-4527-91af-41650751505a"
+    },
+    "sources": [
+      {
+        "title": "交通部觀光署，2021年臺灣旅遊狀況調查（含2019至2021）",
+        "url": "https://admin.taiwan.net.tw/fapi/AttFile?id=27974&type=AttFile"
+      },
+      {
+        "title": "交通部觀光署，歷年臺灣旅遊狀況調查",
+        "url": "https://admin.taiwan.net.tw/fapi/AttFile?id=38640&type=AttFile"
+      },
+      {
+        "title": "交通部，114年國旅調查新聞稿",
+        "url": "https://www.motc.gov.tw/ch/app/data/view?id=14&module=news&serno=96139457-a19b-4527-91af-41650751505a"
+      }
+    ],
+    "series": [
+      {
+        "sheet": "製圖數據",
+        "unit": "萬旅次",
+        "points": [
+          {
+            "label": "2019",
+            "value": 16927.9
+          },
+          {
+            "label": "2020",
+            "value": 14297
+          },
+          {
+            "label": "2021",
+            "value": 12602.7
+          },
+          {
+            "label": "2022",
+            "value": 16856
+          },
+          {
+            "label": "2023",
+            "value": 20674.7
+          },
+          {
+            "label": "2024",
+            "value": 22203
+          },
+          {
+            "label": "2025",
+            "value": 24761
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "number": "03",
+    "file": "03_上班族都討厭工作.xlsx",
+    "sha256": "66dc01b07211b14141d6ce6b1873de552562b5453ed08bde8875fe5ce0116e02",
+    "workbookUrl": "/sources/topic-03.xlsx",
+    "meta": {
+      "案例": "上班族都討厭自己的工作？",
+      "偏誤類型": "負面型直覺",
+      "適用性判定": "可用；須遵守下列口徑限制",
+      "圖表建議": "長條圖",
+      "資料期間": "2025年調查",
+      "數值單位": "%",
+      "統計口徑與注意事項": "調查對象為參加勞保、就保及職災保險之本國籍受僱勞工；是主觀自評，不能外推所有工作者。",
+      "資料查核日": "2026-10-03",
+      "資料來源1": "勞動部，114年勞工生活及就業狀況調查（有效樣本4,029份）",
+      "網址或路徑1": "https://www.mol.gov.tw/1607/1632/1633/87690/"
+    },
+    "sources": [
+      {
+        "title": "勞動部，114年勞工生活及就業狀況調查（有效樣本4,029份）",
+        "url": "https://www.mol.gov.tw/1607/1632/1633/87690/"
+      }
+    ],
+    "series": [
+      {
+        "sheet": "製圖數據",
+        "unit": "%",
+        "points": [
+          {
+            "label": "滿意",
+            "value": 73.7
+          },
+          {
+            "label": "普通",
+            "value": 23.2
+          },
+          {
+            "label": "不滿意",
+            "value": 3.1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "number": "04",
+    "file": "04_離婚對數近年成長.xlsx",
+    "sha256": "99d4c22936ec8e1d763e715a3b1dba3de697f387edc733f5e7f8b86a70102fcb",
+    "workbookUrl": "/sources/topic-04.xlsx",
+    "meta": {
+      "案例": "離婚對數近年來明顯成長？",
+      "偏誤類型": "直線型直覺",
+      "適用性判定": "可用；10年趨勢較原PDF的5年更適合",
+      "圖表建議": "折線圖",
+      "資料期間": "2016–2025年",
+      "數值單位": "對",
+      "統計口徑與注意事項": "延長為10年避免只從2021年疫情低點起算。離婚／終止結婚對數為絕對件數；若要比較個人離婚風險，應另用有偶人口作分母。",
+      "資料查核日": "2026-10-03",
+      "資料來源1": "內政部，115年第38週內政統計通報",
+      "網址或路徑1": "https://www.moi.gov.tw/News_Content.aspx?n=2905&s=341050&sms=10305",
+      "資料來源2": "內政部，歷年離婚／終止結婚統計表",
+      "網址或路徑2": "https://ws.moi.gov.tw/Download.ashx?icon=.pdf&n=MTEy5bm056ysNDDpgLHlhafmlL%2FntbHoqIjpgJrloLFf5ama6b2h57Wx6KiILnBkZg%3D%3D&u=LzAwMS9VcGxvYWQvNDAwL3JlbGZpbGUvMC8xODc1OC82ZTU5N2YxMi03ZDQ4LTQ4MTgtYmE4NS02Njg3YmFlZmUzNjUucGRm"
+    },
+    "sources": [
+      {
+        "title": "內政部，115年第38週內政統計通報",
+        "url": "https://www.moi.gov.tw/News_Content.aspx?n=2905&s=341050&sms=10305"
+      },
+      {
+        "title": "內政部，歷年離婚／終止結婚統計表",
+        "url": "https://ws.moi.gov.tw/Download.ashx?icon=.pdf&n=MTEy5bm056ysNDDpgLHlhafmlL%2FntbHoqIjpgJrloLFf5ama6b2h57Wx6KiILnBkZg%3D%3D&u=LzAwMS9VcGxvYWQvNDAwL3JlbGZpbGUvMC8xODc1OC82ZTU5N2YxMi03ZDQ4LTQ4MTgtYmE4NS02Njg3YmFlZmUzNjUucGRm"
+      }
+    ],
+    "series": [
+      {
+        "sheet": "製圖數據",
+        "unit": "對",
+        "points": [
+          {
+            "label": "2016",
+            "value": 53850
+          },
+          {
+            "label": "2017",
+            "value": 54439
+          },
+          {
+            "label": "2018",
+            "value": 54402
+          },
+          {
+            "label": "2019",
+            "value": 54346
+          },
+          {
+            "label": "2020",
+            "value": 51610
+          },
+          {
+            "label": "2021",
+            "value": 47888
+          },
+          {
+            "label": "2022",
+            "value": 50803
+          },
+          {
+            "label": "2023",
+            "value": 53071
+          },
+          {
+            "label": "2024",
+            "value": 53351
+          },
+          {
+            "label": "2025",
+            "value": 52140
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "number": "05",
+    "file": "05_住宅火災最常原因.xlsx",
+    "sha256": "edde371907b67c74120a2a395ee57d94260738c7d435410a8b1a6a861d02f726",
+    "workbookUrl": "/sources/topic-05.xlsx",
+    "meta": {
+      "案例": "住宅火災最常由什麼引起？",
+      "偏誤類型": "恐懼型直覺",
+      "適用性判定": "可用；須遵守下列口徑限制",
+      "圖表建議": "長條圖",
+      "資料期間": "2022–2024年合計",
+      "數值單位": "%",
+      "統計口徑與注意事項": "前三項為官方發布百分比；「其他原因」=100−40.1−28.0−20.3，為依公布值計算，可能有四捨五入誤差。",
+      "資料查核日": "2026-10-03",
+      "資料來源1": "內政部消防署，居家安全新聞稿",
+      "網址或路徑1": "https://www.moi.gov.tw/News_Content.aspx?n=4&s=330332"
+    },
+    "sources": [
+      {
+        "title": "內政部消防署，居家安全新聞稿",
+        "url": "https://www.moi.gov.tw/News_Content.aspx?n=4&s=330332"
+      }
+    ],
+    "series": [
+      {
+        "sheet": "製圖數據",
+        "unit": "%",
+        "points": [
+          {
+            "label": "電氣因素",
+            "value": 40.1
+          },
+          {
+            "label": "爐火烹調",
+            "value": 28
+          },
+          {
+            "label": "遺留火種",
+            "value": 20.3
+          },
+          {
+            "label": "其他原因",
+            "value": 11.6
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "number": "06",
+    "file": "06_一年暴力犯罪幾件.xlsx",
+    "sha256": "aa23c5b8ef84565cf52ec36dc65ebdeb1ee111976b6376a16fc8b5c3fbae07cb",
+    "workbookUrl": "/sources/topic-06.xlsx",
+    "meta": {
+      "案例": "台灣一年暴力犯罪有幾件？",
+      "偏誤類型": "恐懼型直覺",
+      "適用性判定": "可用；標題應寫「警政署七類暴力犯罪」避免擴大定義",
+      "圖表建議": "長條圖",
+      "資料期間": "2025年",
+      "數值單位": "件",
+      "統計口徑與注意事項": "警政署定義的七類合計503件，不等於所有日常語意的暴力事件，也未涵蓋未報案黑數。「重大恐嚇取財」官方以「-」標示，製圖以0顯示。113年9月起案件數認定原則改變，勿直接跨制度比較。",
+      "資料查核日": "2026-10-03",
+      "資料來源1": "內政部警政署，115年第22週警政統計通報表3",
+      "網址或路徑1": "https://www.npa.gov.tw/ch/app/data/doc?detailNo=1508721510041260032&module=wg057&type=s"
+    },
+    "sources": [
+      {
+        "title": "內政部警政署，115年第22週警政統計通報表3",
+        "url": "https://www.npa.gov.tw/ch/app/data/doc?detailNo=1508721510041260032&module=wg057&type=s"
+      }
+    ],
+    "series": [
+      {
+        "sheet": "製圖數據",
+        "unit": "件",
+        "points": [
+          {
+            "label": "故意殺人",
+            "value": 158
+          },
+          {
+            "label": "擄人勒贖",
+            "value": 4
+          },
+          {
+            "label": "強盜",
+            "value": 130
+          },
+          {
+            "label": "搶奪",
+            "value": 118
+          },
+          {
+            "label": "重傷害",
+            "value": 14
+          },
+          {
+            "label": "重大恐嚇取財",
+            "value": 0
+          },
+          {
+            "label": "強制性交",
+            "value": 79
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "number": "07",
+    "file": "07_平均月薪與中位數.xlsx",
+    "sha256": "370bfcb7791892fa3ef42876dc5ea056e316bf4f54c0210f4f75eaeb68a735ac",
+    "workbookUrl": "/sources/topic-07.xlsx",
+    "meta": {
+      "案例": "平均月薪近4.8萬，多數人都領這麼多？",
+      "偏誤類型": "失真型直覺",
+      "適用性判定": "可用；須遵守下列口徑限制",
+      "圖表建議": "長條圖",
+      "資料期間": "2025年",
+      "數值單位": "元/月",
+      "統計口徑與注意事項": "每人每月經常性薪資，涵蓋全體受僱員工（含本國籍、外國籍、全時與部分工時）；非實領或總薪資。中位數代表一半受僱員工高於、另一半低於此值。",
+      "資料查核日": "2026-10-03",
+      "資料來源1": "行政院主計總處，114年受僱員工薪資統計",
+      "網址或路徑1": "https://www.stat.gov.tw/News_Content.aspx?n=2724&s=235863"
+    },
+    "sources": [
+      {
+        "title": "行政院主計總處，114年受僱員工薪資統計",
+        "url": "https://www.stat.gov.tw/News_Content.aspx?n=2724&s=235863"
+      }
+    ],
+    "series": [
+      {
+        "sheet": "製圖數據",
+        "unit": "元/月",
+        "points": [
+          {
+            "label": "平均數",
+            "value": 47884
+          },
+          {
+            "label": "中位數",
+            "value": 38406
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "number": "08",
+    "file": "08_低度用電住宅近半.xlsx",
+    "sha256": "b7a6a83daaf2958181319648fd5743f4fe6024d425b3dbe480a4037662ee48d0",
+    "workbookUrl": "/sources/topic-08.xlsx",
+    "meta": {
+      "案例": "89.5萬戶低度用電，等於近半住宅空著？",
+      "偏誤類型": "失真型直覺",
+      "適用性判定": "可用；須遵守下列口徑限制",
+      "圖表建議": "長條圖",
+      "資料期間": "2025年下半年",
+      "數值單位": "%",
+      "統計口徑與注意事項": "低度用電住宅894,582宅，占稅籍住宅9.44%；其餘90.56%由100−9.44計算。定義為11、12月平均每月用電量≤60度，不能直接認定每一戶皆空置。PDF圖的9.4%為四捨五入。",
+      "資料查核日": "2026-10-03",
+      "資料來源1": "內政部不動產資訊平台，114年下半年低度使用（用電）住宅",
+      "網址或路徑1": "https://pip.moi.gov.tw/Publicize/Info/E1040"
+    },
+    "sources": [
+      {
+        "title": "內政部不動產資訊平台，114年下半年低度使用（用電）住宅",
+        "url": "https://pip.moi.gov.tw/Publicize/Info/E1040"
+      }
+    ],
+    "series": [
+      {
+        "sheet": "製圖數據",
+        "unit": "%",
+        "points": [
+          {
+            "label": "低度用電住宅",
+            "value": 9.44
+          },
+          {
+            "label": "其餘稅籍住宅",
+            "value": 90.56
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "number": "09",
+    "file": "09_疫情後大家都遠距.xlsx",
+    "sha256": "22f2cd3d08bc3a8cc9051ea4c2d2ffda646defd887f2f19be7f88f6c659603c1",
+    "workbookUrl": "/sources/topic-09.xlsx",
+    "meta": {
+      "案例": "疫情後大家都遠距工作？",
+      "偏誤類型": "概括化直覺",
+      "適用性判定": "可用；已修正原PDF並列不同口徑的問題",
+      "圖表建議": "長條圖",
+      "資料期間": "2025年調查",
+      "數值單位": "%",
+      "統計口徑與注意事項": "4.7%為近三個月曾實施遠距的受訪勞工；95.3%=100−4.7為計算補數。原PDF把「工作完全不能遠距」87.7%和「曾遠距」4.7%並列，兩者口徑不同；此表改為同一問題的互斥分類。調查對象是本國籍受僱勞工。",
+      "資料查核日": "2026-10-03",
+      "資料來源1": "勞動部，114年勞工生活及就業狀況調查",
+      "網址或路徑1": "https://www.mol.gov.tw/1607/1632/1633/87690/"
+    },
+    "sources": [
+      {
+        "title": "勞動部，114年勞工生活及就業狀況調查",
+        "url": "https://www.mol.gov.tw/1607/1632/1633/87690/"
+      }
+    ],
+    "series": [
+      {
+        "sheet": "製圖數據",
+        "unit": "%",
+        "points": [
+          {
+            "label": "近3個月曾遠距",
+            "value": 4.7
+          },
+          {
+            "label": "近3個月未曾遠距",
+            "value": 95.3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "number": "10",
+    "file": "10_再生能源建不起來.xlsx",
+    "sha256": "c44edd05581cfd5f34f62707bf8cc9390ac1c0f43190a8d79af74153f650e31e",
+    "workbookUrl": "/sources/topic-10.xlsx",
+    "meta": {
+      "案例": "台灣再生能源建不起來？",
+      "偏誤類型": "宿命型直覺",
+      "適用性判定": "可用於「有成長」；不能推論發電占比或政策達標",
+      "圖表建議": "折線圖",
+      "資料期間": "2021–2025年年底",
+      "數值單位": "MW",
+      "統計口徑與注意事項": "年底累計裝置容量，不是當年新增容量，也不是實際發電量。2025年22,872MW有成長，但仍低於原政策目標29,425MW；不能解讀為已達標。",
+      "資料查核日": "2026-10-03",
+      "資料來源1": "國發會，2021永續發展目標年度總檢討報告",
+      "網址或路徑1": "https://ncsd.ndc.gov.tw/_ofu/download/annualReport3/2021%E8%87%BA%E7%81%A3%E6%B0%B8%E7%BA%8C%E7%99%BC%E5%B1%95%E7%9B%AE%E6%A8%99%E5%B9%B4%E5%BA%A6%E7%B8%BD%E6%AA%A2%E8%A8%8E%E5%A0%B1%E5%91%8A%EF%BC%88%E5%B7%B2%E6%A0%B8%E5%AE%9A%EF%BC%89.pdf",
+      "資料來源2": "經濟部能源署，再生能源統計",
+      "網址或路徑2": "https://www.moeaea.gov.tw/ECW/populace/content/Content.aspx?menu_id=14438",
+      "資料來源3": "經濟部，113年永續發展指標執行情形",
+      "網址或路徑3": "https://www.moea.gov.tw/Mns/main/content/wHandEditorFile.ashx?file_id=15037"
+    },
+    "sources": [
+      {
+        "title": "國發會，2021永續發展目標年度總檢討報告",
+        "url": "https://ncsd.ndc.gov.tw/_ofu/download/annualReport3/2021%E8%87%BA%E7%81%A3%E6%B0%B8%E7%BA%8C%E7%99%BC%E5%B1%95%E7%9B%AE%E6%A8%99%E5%B9%B4%E5%BA%A6%E7%B8%BD%E6%AA%A2%E8%A8%8E%E5%A0%B1%E5%91%8A%EF%BC%88%E5%B7%B2%E6%A0%B8%E5%AE%9A%EF%BC%89.pdf"
+      },
+      {
+        "title": "經濟部能源署，再生能源統計",
+        "url": "https://www.moeaea.gov.tw/ECW/populace/content/Content.aspx?menu_id=14438"
+      },
+      {
+        "title": "經濟部，113年永續發展指標執行情形",
+        "url": "https://www.moea.gov.tw/Mns/main/content/wHandEditorFile.ashx?file_id=15037"
+      }
+    ],
+    "series": [
+      {
+        "sheet": "製圖數據",
+        "unit": "MW",
+        "points": [
+          {
+            "label": "2021",
+            "value": 11585
+          },
+          {
+            "label": "2022",
+            "value": 14129
+          },
+          {
+            "label": "2023",
+            "value": 17956
+          },
+          {
+            "label": "2024",
+            "value": 21052
+          },
+          {
+            "label": "2025",
+            "value": 22872
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "number": "11",
+    "file": "11_住房率低等於沒國旅.xlsx",
+    "sha256": "ac2e54b308168fce3ffa7156d711bf6371935f443ae54f65df4a529bf4119614",
+    "workbookUrl": "/sources/topic-11.xlsx",
+    "meta": {
+      "案例": "住房率低，就等於國旅沒人？",
+      "偏誤類型": "單一視角直覺",
+      "適用性判定": "可用於解釋指標差異；不能推論旅宿業沒有問題",
+      "圖表建議": "長條圖",
+      "資料期間": "2025年",
+      "數值單位": "%",
+      "統計口徑與注意事項": "主圖分類為國內旅遊旅次，20.9%=100−79.1為計算值。另附旅宿住房率工作表供對照；旅次與客房住房率分母不同，不能當作同一量尺直接比較，也不能據此否定旅宿業困境。",
+      "資料查核日": "2026-10-03",
+      "資料來源1": "交通部，114年臺灣旅遊狀況調查新聞稿",
+      "網址或路徑1": "https://www.motc.gov.tw/ch/app/data/view?id=14&module=news&serno=96139457-a19b-4527-91af-41650751505a",
+      "資料來源2": "交通部，107至114年旅宿量體及住用率統計",
+      "網址或路徑2": "https://www.motc.gov.tw/ch/app/data/doc?aplistdn=&detailNo=1476399792291581952&id=14&module=news&preview=&serno=6eac8345-90b8-479d-90fc-124608b97c20&type=s"
+    },
+    "sources": [
+      {
+        "title": "交通部，114年臺灣旅遊狀況調查新聞稿",
+        "url": "https://www.motc.gov.tw/ch/app/data/view?id=14&module=news&serno=96139457-a19b-4527-91af-41650751505a"
+      },
+      {
+        "title": "交通部，107至114年旅宿量體及住用率統計",
+        "url": "https://www.motc.gov.tw/ch/app/data/doc?aplistdn=&detailNo=1476399792291581952&id=14&module=news&preview=&serno=6eac8345-90b8-479d-90fc-124608b97c20&type=s"
+      }
+    ],
+    "series": [
+      {
+        "sheet": "製圖數據",
+        "unit": "%",
+        "points": [
+          {
+            "label": "當日來回",
+            "value": 79.1
+          },
+          {
+            "label": "有過夜",
+            "value": 20.9
+          }
+        ]
+      },
+      {
+        "sheet": "旅宿住房率",
+        "unit": "%",
+        "points": [
+          {
+            "label": "2023",
+            "value": 46.8
+          },
+          {
+            "label": "2024",
+            "value": 46.09
+          },
+          {
+            "label": "2025",
+            "value": 45.73
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "number": "12",
+    "file": "12_行人被撞主要怪自己.xlsx",
+    "sha256": "752abc6e5ee511d3761b6a4051de2056de944992e011ec88c7e21d6b164b7e1c",
+    "workbookUrl": "/sources/topic-12.xlsx",
+    "meta": {
+      "案例": "行人出事主要怪自己亂穿越？",
+      "偏誤類型": "怪罪型直覺",
+      "適用性判定": "限縮使用；只可說兩項肇因的A1+A2件數，不能概括所有行人事故",
+      "圖表建議": "長條圖",
+      "資料期間": "2025年",
+      "數值單位": "件",
+      "統計口徑與注意事項": "僅比較「人與車」傷亡事故第一當事者的兩個特定主要肇因；不是全部駕駛或行人責任。A1死亡事故單看，行人違規穿越40件反而多於車輛未停讓33件；合併A1+A2主要受A2影響。警方初判不是司法最終肇責。PDF原用另一份歷史研究的概略百分比，口徑不同。",
+      "資料查核日": "2026-10-03",
+      "資料來源1": "內政部警政署114年A1／A2逐案資料",
+      "網址或路徑1": "https://data.gov.tw/dataset/177136",
+      "資料來源2": "同一資料集重算口徑說明（本專題）",
+      "網址或路徑2": "/sources/topic-12-method.md"
+    },
+    "sources": [
+      {
+        "title": "內政部警政署114年A1／A2逐案資料",
+        "url": "https://data.gov.tw/dataset/177136"
+      },
+      {
+        "title": "同一資料集重算口徑說明（本專題）",
+        "url": "/sources/topic-12-method.md"
+      }
+    ],
+    "series": [
+      {
+        "sheet": "製圖數據",
+        "unit": "件",
+        "points": [
+          {
+            "label": "車輛未依規定暫停讓行人先行",
+            "value": 4573
+          },
+          {
+            "label": "行人未依標誌或標線穿越道路",
+            "value": 1735
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "number": "13",
+    "file": "13_十次車禍九次快.xlsx",
+    "sha256": "b24d6299b71cf598681c604899d41d7bf1ccec7af893f7d50504c33f952f94cc",
+    "workbookUrl": "/sources/topic-13.xlsx",
+    "meta": {
+      "案例": "十次車禍真的九次快？",
+      "偏誤類型": "怪罪型直覺",
+      "適用性判定": "可用；須遵守下列口徑限制",
+      "圖表建議": "長條圖",
+      "資料期間": "2025年",
+      "數值單位": "件",
+      "統計口徑與注意事項": "A1+A2事故第一當事者主要肇因。分心=297+31,541；超速=19+834。官方分類名稱為「超速駕駛」，PDF的「超速失控」應改字。主因登錄件數不等於車速是所有事故的唯一風險因素。",
+      "資料查核日": "2026-10-03",
+      "資料來源1": "內政部警政署114年A1／A2逐案資料",
+      "網址或路徑1": "https://data.gov.tw/dataset/177136",
+      "資料來源2": "本專題全肇因重算表",
+      "網址或路徑2": "/sources/topic-13-method.csv"
+    },
+    "sources": [
+      {
+        "title": "內政部警政署114年A1／A2逐案資料",
+        "url": "https://data.gov.tw/dataset/177136"
+      },
+      {
+        "title": "本專題全肇因重算表",
+        "url": "/sources/topic-13-method.csv"
+      }
+    ],
+    "series": [
+      {
+        "sheet": "製圖數據",
+        "unit": "件",
+        "points": [
+          {
+            "label": "恍神緊張心不在焉分心駕駛",
+            "value": 31838
+          },
+          {
+            "label": "超速駕駛",
+            "value": 853
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "number": "14",
+    "file": "14_廚餘不餵豬後沒去處.xlsx",
+    "sha256": "91e4da1babd48fa72e263757e4caa5e4124c613a9fc1a22c7b46ec3e357dc827",
+    "workbookUrl": "/sources/topic-14.xlsx",
+    "meta": {
+      "案例": "廚餘不餵豬後，所有廚餘都沒去處？",
+      "偏誤類型": "急迫型直覺",
+      "適用性判定": "不建議按原題當成打臉案例；只能說原本有其他去向，且確有處理缺口",
+      "圖表建議": "長條圖",
+      "資料期間": "2024年家戶回收廚餘",
+      "數值單位": "%",
+      "統計口徑與注意事項": "2024年家戶回收廚餘50.5萬噸中，養豬21.6萬噸(42.8%)、堆肥23.1萬噸(45.8%)、其他含能源化及黑水虻等5.8萬噸(11.4%)。不含事業廚餘。環境部2025年報告指出家戶與事業廚餘合計77.2萬噸，既有再利用設施每日處理量能約1,620噸，仍有近500噸/日缺口。因此本表不能證明禁餵豬後所有廚餘有足夠去處；原PDF把「其他」拆成9.5%能源化與1.9%其他，這次採部會核定報告的官方分類。",
+      "資料查核日": "2026-10-03",
+      "資料來源1": "環境部門第三期溫室氣體減量行動方案，家戶廚餘2024年處理分類",
+      "網址或路徑1": "https://ncsd.ndc.gov.tw/_ofu/FileDatabase/bacbaff1-295f-49ab-b4a2-6b6507b16f03/06_%E7%AC%AC%E4%B8%89%E6%9C%9F%E7%92%B0%E5%A2%83%E9%83%A8%E9%96%80%E6%BA%AB%E5%AE%A4%E6%B0%A3%E9%AB%94%E6%B8%9B%E9%87%8F%E8%A1%8C%E5%8B%95%E6%96%B9%E6%A1%88-%E6%A0%B8%E5%AE%9A%E6%9C%AC.pdf",
+      "資料來源2": "環境部，2025年10月廚餘去化專案報告",
+      "網址或路徑2": "https://www.moenv.gov.tw/policies-and-laws/meetings/34337.html"
+    },
+    "sources": [
+      {
+        "title": "環境部門第三期溫室氣體減量行動方案，家戶廚餘2024年處理分類",
+        "url": "https://ncsd.ndc.gov.tw/_ofu/FileDatabase/bacbaff1-295f-49ab-b4a2-6b6507b16f03/06_%E7%AC%AC%E4%B8%89%E6%9C%9F%E7%92%B0%E5%A2%83%E9%83%A8%E9%96%80%E6%BA%AB%E5%AE%A4%E6%B0%A3%E9%AB%94%E6%B8%9B%E9%87%8F%E8%A1%8C%E5%8B%95%E6%96%B9%E6%A1%88-%E6%A0%B8%E5%AE%9A%E6%9C%AC.pdf"
+      },
+      {
+        "title": "環境部，2025年10月廚餘去化專案報告",
+        "url": "https://www.moenv.gov.tw/policies-and-laws/meetings/34337.html"
+      }
+    ],
+    "series": [
+      {
+        "sheet": "製圖數據",
+        "unit": "%",
+        "points": [
+          {
+            "label": "養豬利用",
+            "value": 42.8
+          },
+          {
+            "label": "堆肥再利用",
+            "value": 45.8
+          },
+          {
+            "label": "其他再利用",
+            "value": 11.4
+          }
+        ]
+      }
+    ]
+  }
+]

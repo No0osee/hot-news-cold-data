@@ -1,0 +1,774 @@
+/* Compact Game-First Catan & Voxel Island UI */
+:root {
+  --paper: #f6f1e7;
+  --paper-warm: #ede5d6;
+  --paper-card: rgba(250, 247, 240, 0.96);
+  --ink: #1e1916;
+  --ink-soft: #4a423b;
+  --muted: #786e65;
+  --line: #d6cbb9;
+  --line-strong: #b8aa95;
+  --terracotta: #b83728;
+  --terracotta-soft: rgba(184, 55, 40, 0.1);
+  --sage: #2a6f52;
+  --header-h: 56px;
+}
+
+.catan-root {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  user-select: none;
+}
+
+/* 3D Tabletop Stage */
+#stage {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: 1;
+}
+
+#stage canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.catan-chips-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* Catan Tabletop Chit (Circular Number Token + Short Name) */
+.hex-chit {
+  position: absolute;
+  pointer-events: auto;
+  cursor: pointer;
+  background: rgba(250, 247, 240, 0.95);
+  color: var(--ink);
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1.5px solid var(--line-strong);
+  box-shadow: 0 6px 18px rgba(30, 25, 22, 0.2);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.16s ease, border-color 0.16s ease, box-shadow 0.16s ease, opacity 0.08s ease;
+  white-space: nowrap;
+  will-change: transform, opacity;
+}
+
+.hex-chit .chit-token {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--paper-warm);
+  border: 1px solid var(--line-strong);
+  font-family: 'Noto Serif TC', Georgia, serif;
+  font-size: 11px;
+  font-weight: 900;
+  color: var(--terracotta);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.hex-chit .chit-label {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.hex-chit .chit-verified {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--sage);
+  flex-shrink: 0;
+}
+
+.hex-chit:hover {
+  background: #fff;
+  border-color: var(--terracotta);
+  box-shadow: 0 6px 18px rgba(184, 55, 40, 0.25);
+  z-index: 20;
+}
+
+.hex-chit.active {
+  background: var(--ink);
+  border-color: var(--ink);
+  box-shadow: 0 8px 22px rgba(30, 25, 22, 0.35);
+  z-index: 25;
+}
+
+.hex-chit.active .chit-token {
+  background: var(--terracotta);
+  border-color: var(--terracotta);
+  color: #fff;
+}
+
+.hex-chit.active .chit-label {
+  color: var(--paper);
+}
+
+.hex-chit.completed {
+  border-color: var(--sage);
+}
+
+.hex-chit.dim {
+  opacity: 0.22 !important;
+  filter: grayscale(0.85);
+}
+
+/* Floating Top Game HUD */
+.atlas-header {
+  position: fixed;
+  top: 10px;
+  left: 12px;
+  right: 12px;
+  z-index: 35;
+  pointer-events: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px 8px;
+}
+
+.atlas-left-group {
+  pointer-events: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
+
+.atlas-brand {
+  pointer-events: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(250, 247, 240, 0.95);
+  backdrop-filter: blur(12px);
+  border: 1.5px solid var(--line-strong);
+  padding: 6px 14px;
+  border-radius: 999px;
+  box-shadow: 0 6px 18px rgba(30, 25, 22, 0.12);
+  flex-shrink: 0;
+}
+
+.atlas-title {
+  font-family: 'Noto Serif TC', Georgia, serif;
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 0.03em;
+  color: var(--ink);
+  margin: 0;
+  white-space: nowrap;
+}
+
+.atlas-center {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.domain-tabs {
+  display: inline-flex;
+  background: rgba(250, 247, 240, 0.95);
+  backdrop-filter: blur(12px);
+  border: 1.5px solid var(--line-strong);
+  border-radius: 999px;
+  padding: 3px;
+  gap: 2px;
+  box-shadow: 0 6px 18px rgba(30, 25, 22, 0.12);
+}
+
+.domain-tabs button {
+  border: 0;
+  background: transparent;
+  color: var(--ink-soft);
+  font-family: inherit;
+  font-size: 12.5px;
+  font-weight: 800;
+  padding: 5px 11px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.domain-tabs button:hover {
+  color: var(--ink);
+}
+
+.domain-tabs button.active {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.atlas-controls {
+  pointer-events: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+}
+
+.ctrl-btn {
+  height: 36px;
+  padding: 0 12px;
+  border-radius: 999px;
+  border: 1.5px solid var(--line-strong);
+  background: rgba(250, 247, 240, 0.95);
+  backdrop-filter: blur(12px);
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+  box-shadow: 0 6px 18px rgba(30, 25, 22, 0.12);
+  transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+.ctrl-btn:hover {
+  border-color: var(--ink);
+  background: #fff;
+}
+
+.ctrl-btn.active {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+
+.ctrl-btn .badge-num {
+  font-family: 'Noto Serif TC', Georgia, serif;
+  font-size: 11px;
+  font-weight: 900;
+  color: var(--terracotta);
+}
+
+.ctrl-btn.active .badge-num {
+  color: #ff9d8f;
+}
+
+/* Expandable Tools Dropdown Menu */
+.tools-menu-wrap {
+  position: relative;
+  display: inline-flex;
+}
+
+.tools-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 268px;
+  background: rgba(250, 247, 240, 0.98);
+  backdrop-filter: blur(16px);
+  border: 1.5px solid var(--line-strong);
+  border-radius: 14px;
+  box-shadow: 0 16px 36px rgba(30, 25, 22, 0.24);
+  padding: 12px;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tools-section-label {
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--muted);
+  margin-bottom: 5px;
+  display: block;
+}
+
+.light-switch {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: var(--paper-warm);
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  padding: 3px;
+  gap: 3px;
+}
+
+.light-switch button {
+  border: 0;
+  background: transparent;
+  color: var(--ink-soft);
+  font-family: inherit;
+  font-size: 12.5px;
+  font-weight: 800;
+  padding: 5px 4px;
+  border-radius: 6px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.light-switch button.active {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.tools-menu-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.tools-item-btn {
+  width: 100%;
+  padding: 8px 11px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.15s ease;
+}
+
+.tools-item-btn:hover {
+  border-color: var(--ink);
+  background: var(--paper);
+}
+
+.tools-item-btn.active {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+
+.tools-item-btn.danger {
+  color: #b83728;
+  border-color: rgba(184, 55, 40, 0.3);
+}
+
+.tools-item-btn.danger:hover {
+  background: rgba(184, 55, 40, 0.08);
+  border-color: #b83728;
+}
+
+/* Bottom-Left Compact 2D Hex Mini-Map */
+.board-compass {
+  position: fixed;
+  left: 14px;
+  bottom: 14px;
+  z-index: 15;
+  background: var(--paper-card);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 8px 10px;
+  box-shadow: 0 8px 24px rgba(30, 25, 22, 0.08);
+  width: 186px;
+}
+
+.compass-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 10.5px;
+  font-weight: 800;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.mini-hex-svg {
+  width: 100%;
+  height: 92px;
+  display: block;
+}
+
+.mini-hex-poly {
+  cursor: pointer;
+  stroke: var(--paper);
+  stroke-width: 1.5;
+  transition: opacity 0.15s ease;
+}
+
+.mini-hex-poly:hover {
+  opacity: 0.85;
+}
+
+/* Bottom Quick Tile Strip (Single-row horizontally scrollable + collapsible) */
+.tile-strip-wrapper {
+  position: fixed;
+  left: 212px;
+  right: 14px;
+  bottom: 12px;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  pointer-events: none;
+}
+
+.tile-strip-toggle {
+  pointer-events: auto;
+  flex-shrink: 0;
+  height: 36px;
+  padding: 0 11px;
+  border-radius: 999px;
+  border: 1.5px solid var(--line-strong);
+  background: var(--paper-card);
+  backdrop-filter: blur(10px);
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  white-space: nowrap;
+  box-shadow: 0 6px 16px rgba(30, 25, 22, 0.12);
+}
+
+.tile-strip-toggle:hover {
+  border-color: var(--ink);
+  background: #fff;
+}
+
+.tile-strip {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+  padding: 2px 4px 4px 2px;
+  scrollbar-width: thin;
+}
+
+.strip-item {
+  flex-shrink: 0;
+  white-space: nowrap;
+  border: 1.5px solid var(--line-strong);
+  background: var(--paper-card);
+  backdrop-filter: blur(10px);
+  color: var(--ink);
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-family: inherit;
+  font-size: 12.5px;
+  font-weight: 800;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  box-shadow: 0 4px 12px rgba(30, 25, 22, 0.1);
+  transition: all 0.15s ease;
+}
+
+.strip-item .num {
+  font-family: 'Noto Serif TC', Georgia, serif;
+  font-size: 10.5px;
+  font-weight: 900;
+  color: var(--terracotta);
+}
+
+.strip-item:hover {
+  border-color: var(--ink);
+  background: #fff;
+}
+
+.strip-item.active {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+
+.strip-item.active .num {
+  color: #ff9d8f;
+}
+
+.strip-item.done {
+  border-color: var(--sage);
+  box-shadow: inset 0 -2px 0 var(--sage), 0 4px 12px rgba(30, 25, 22, 0.1);
+}
+
+.strip-item.in-progress {
+  border-color: #d97706;
+}
+
+/* Compact Floating Game Card on Right (Guaranteed NEVER to overlap bottom strip) */
+.game-card {
+  position: fixed;
+  top: 66px;
+  bottom: 66px;
+  right: 14px;
+  width: 344px;
+  height: fit-content;
+  max-height: calc(100dvh - 136px);
+  z-index: 28;
+  background: var(--paper-card);
+  backdrop-filter: blur(14px);
+  border: 1.5px solid var(--line-strong);
+  border-radius: 12px;
+  box-shadow: 0 16px 40px rgba(30, 25, 22, 0.18);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transform: translateX(380px);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.22s ease;
+}
+
+.game-card.open {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.gc-head {
+  padding: 12px 16px 10px;
+  border-bottom: 1px solid var(--line);
+  position: relative;
+  overflow-y: auto;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.gc-close {
+  position: sticky;
+  top: 0;
+  float: right;
+  margin-left: 8px;
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  border: 1px solid var(--line-strong);
+  background: #fff;
+  color: var(--ink);
+  font-size: 16px;
+  font-weight: 900;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+.gc-close:hover {
+  border-color: var(--terracotta);
+  color: var(--terracotta);
+}
+
+.gc-badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  padding-right: 36px;
+}
+
+.gc-cat {
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 10.5px;
+  white-space: nowrap;
+}
+
+.gc-title {
+  font-family: 'Noto Serif TC', Georgia, serif;
+  font-size: 19px;
+  font-weight: 900;
+  color: var(--ink);
+  margin: 6px 0 2px;
+}
+
+.gc-meta-strip {
+  padding: 6px 14px 8px;
+  background: var(--paper-warm);
+  border-top: 1px dashed var(--line);
+  font-size: 10px;
+  line-height: 1.35;
+  color: var(--muted);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5px;
+  flex-shrink: 0;
+}
+
+.gc-actions {
+  padding: 10px 14px;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.btn-play-main {
+  width: 100%;
+  padding: 11px 14px;
+  border-radius: 8px;
+  border: none;
+  background: var(--terracotta);
+  color: #fff;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(184, 55, 40, 0.25);
+  transition: background 0.15s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  text-align: center;
+}
+
+.btn-play-sub {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #fde68a;
+}
+
+.btn-play-main:hover {
+  background: #96291c;
+}
+
+.btn-play-secondary {
+  width: 100%;
+  padding: 7px 12px;
+  border-radius: 8px;
+  border: 1.5px solid var(--line-strong);
+  background: #fff;
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 12.5px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-play-secondary:hover {
+  border-color: var(--ink);
+  background: var(--paper-warm);
+}
+
+.gc-foot {
+  padding: 7px 14px;
+  border-top: 1px solid var(--line);
+  background: var(--paper-warm);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11.5px;
+  flex-shrink: 0;
+}
+
+.gc-foot button {
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.gc-foot button:hover {
+  background: rgba(30, 25, 22, 0.08);
+}
+
+/* 4-Step Calibration Modal Overlay */
+.calibration-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 59;
+  background: rgba(18, 15, 14, 0.78);
+  backdrop-filter: blur(8px);
+  pointer-events: none;
+}
+
+.calibration-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  overflow-y: auto;
+}
+
+@media (max-width: 1024px) {
+  .board-compass {
+    display: none;
+  }
+  .tile-strip-wrapper {
+    left: 10px;
+    right: 10px;
+    bottom: 8px;
+  }
+  .game-card {
+    left: auto;
+    right: 12px;
+    width: min(340px, calc(100vw - 24px));
+    top: auto;
+    bottom: 62px;
+    max-height: calc(100dvh - 160px);
+  }
+}
+
+@media (max-width: 640px) {
+  .atlas-header {
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    gap: 5px;
+  }
+  .atlas-brand {
+    padding: 5px 10px;
+  }
+  .atlas-title {
+    font-size: 14px;
+  }
+  .domain-tabs button {
+    font-size: 11.5px;
+    padding: 4px 8px;
+  }
+  .ctrl-btn {
+    height: 32px;
+    padding: 0 9px;
+    font-size: 12px;
+  }
+  .game-card {
+    left: 10px;
+    right: 10px;
+    width: auto;
+    bottom: 58px;
+    max-height: calc(100dvh - 154px);
+  }
+}

@@ -1,0 +1,101 @@
+[
+  {
+    "year": 2017,
+    "enforcement_cases": 10530571,
+    "injury_accident_cases": 296826,
+    "deaths_30_days": 2697,
+    "injuries_persons": 393046,
+    "safety_data_status": "not_marked_preliminary",
+    "enforcement_pdf_page": 10,
+    "safety_pdf_page": 105,
+    "source_url": "https://www.npa.gov.tw/ch/app/data/doc?detailNo=949193398038827008&module=wg055&type=s"
+  },
+  {
+    "year": 2018,
+    "enforcement_cases": 11253311,
+    "injury_accident_cases": 320315,
+    "deaths_30_days": 2780,
+    "injuries_persons": 426799,
+    "safety_data_status": "not_marked_preliminary",
+    "enforcement_pdf_page": 10,
+    "safety_pdf_page": 105,
+    "source_url": "https://www.npa.gov.tw/ch/app/data/doc?detailNo=949193398038827008&module=wg055&type=s"
+  },
+  {
+    "year": 2019,
+    "enforcement_cases": 12701516,
+    "injury_accident_cases": 341972,
+    "deaths_30_days": 2865,
+    "injuries_persons": 455400,
+    "safety_data_status": "not_marked_preliminary",
+    "enforcement_pdf_page": 10,
+    "safety_pdf_page": 105,
+    "source_url": "https://www.npa.gov.tw/ch/app/data/doc?detailNo=949193398038827008&module=wg055&type=s"
+  },
+  {
+    "year": 2020,
+    "enforcement_cases": 14641050,
+    "injury_accident_cases": 362393,
+    "deaths_30_days": 2972,
+    "injuries_persons": 482333,
+    "safety_data_status": "not_marked_preliminary",
+    "enforcement_pdf_page": 10,
+    "safety_pdf_page": 105,
+    "source_url": "https://www.npa.gov.tw/ch/app/data/doc?detailNo=949193398038827008&module=wg055&type=s"
+  },
+  {
+    "year": 2021,
+    "enforcement_cases": 13857211,
+    "injury_accident_cases": 358221,
+    "deaths_30_days": 2962,
+    "injuries_persons": 476304,
+    "safety_data_status": "not_marked_preliminary",
+    "enforcement_pdf_page": 10,
+    "safety_pdf_page": 105,
+    "source_url": "https://www.npa.gov.tw/ch/app/data/doc?detailNo=949193398038827008&module=wg055&type=s"
+  },
+  {
+    "year": 2022,
+    "enforcement_cases": 15016547,
+    "injury_accident_cases": 375844,
+    "deaths_30_days": 3064,
+    "injuries_persons": 499179,
+    "safety_data_status": "not_marked_preliminary",
+    "enforcement_pdf_page": 10,
+    "safety_pdf_page": 105,
+    "source_url": "https://www.npa.gov.tw/ch/app/data/doc?detailNo=949193398038827008&module=wg055&type=s"
+  },
+  {
+    "year": 2023,
+    "enforcement_cases": 17554976,
+    "injury_accident_cases": 403085,
+    "deaths_30_days": 3023,
+    "injuries_persons": 539535,
+    "safety_data_status": "preliminary",
+    "enforcement_pdf_page": 10,
+    "safety_pdf_page": 105,
+    "source_url": "https://www.npa.gov.tw/ch/app/data/doc?detailNo=949193398038827008&module=wg055&type=s"
+  },
+  {
+    "year": 2024,
+    "enforcement_cases": 15095704,
+    "injury_accident_cases": 393883,
+    "deaths_30_days": 2950,
+    "injuries_persons": 524433,
+    "safety_data_status": "preliminary",
+    "enforcement_pdf_page": 10,
+    "safety_pdf_page": 105,
+    "source_url": "https://www.npa.gov.tw/ch/app/data/doc?detailNo=949193398038827008&module=wg055&type=s"
+  },
+  {
+    "year": 2025,
+    "enforcement_cases": 16319308,
+    "injury_accident_cases": 403393,
+    "deaths_30_days": 2858,
+    "injuries_persons": 534134,
+    "safety_data_status": "preliminary",
+    "enforcement_pdf_page": 10,
+    "safety_pdf_page": 105,
+    "source_url": "https://www.npa.gov.tw/ch/app/data/doc?detailNo=949193398038827008&module=wg055&type=s"
+  }
+]
